@@ -11,4 +11,9 @@ public class Persona {
         this.edad = edad;
         this.ciudad = ciudad;
     }
+    public void mostrar(){
+        System.out.println("Nombre: " +nombre);
+        System.out.println("Edad: " +edad);
+        System.out.println("ciudad: " +ciudad);
+    }
 }

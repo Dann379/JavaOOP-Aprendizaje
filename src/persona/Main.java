@@ -14,9 +14,7 @@ public class Main {
             System.out.println("i = " + i);
         }*/
         Persona persona1 = new Persona("Dany", 32, "Puebla");
-        System.out.println("Datos de la Persoan");
-        System.out.println(persona1.nombre);
-        System.out.println(persona1.edad);
-        System.out.println(persona1.ciudad);
+        System.out.println("Datos de la Persona");
+        persona1.mostrar();
     }
 }
