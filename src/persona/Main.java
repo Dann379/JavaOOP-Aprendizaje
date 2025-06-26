@@ -16,5 +16,6 @@ public class Main {
         Persona persona1 = new Persona("Dany", 32, "Puebla");
         System.out.println("Datos de la Persona");
         persona1.mostrar();
+
     }
 }
