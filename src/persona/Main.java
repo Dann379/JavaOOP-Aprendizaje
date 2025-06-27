@@ -33,7 +33,5 @@ public class Main {
             personas.get(i).mostrar();
             System.out.println("-----------------");
         }
-
-
     }
 }
