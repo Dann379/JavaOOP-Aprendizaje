@@ -5,33 +5,44 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
         ArrayList <Persona> personas = new ArrayList<>();
-        //personas.add(new Persona("Dany", 32, "Puebla"));
-        //personas.add(new Persona("Luis", 27, "CDMX"));
-        //Persona persona1 = new Persona("Dany", 32, "Puebla");
+
         Scanner input = new Scanner(System.in);
+        int salir = 0;
+        System.out.println("Agregar Persona");
+        System.out.println("--------------------");
+        System.out.println();
 
-        System.out.println("Ingresa Username");
-        String username = input.nextLine();
+        while (salir != 1) {
+            System.out.println("Se creara nuevo registro");
+            System.out.println("Ingresa Username");
+            String username = input.nextLine();
 
-        System.out.println("Ingresa edad");
-        int edad = input.nextInt();
-        String salto = input.nextLine();
+            System.out.println("Ingresa edad");
+            int edad = input.nextInt();
+            String salto = input.nextLine();
 
-        System.out.println("Ingresa ciudad");
-        String ciudad = input.nextLine();
+            System.out.println("Ingresa ciudad");
+            String ciudad = input.nextLine();
+            System.out.println();
 
-        personas.add(new Persona(username, edad, ciudad));
+            personas.add(new Persona(username, edad, ciudad));
 
-        /*System.out.println("Nombre: " +username);
-        System.out.println("Edad: " +edad);
-        System.out.println("ciudad: " +ciudad);*/
+            System.out.println("Para imprimir personas mayores a 18 presiona 1");
+            int validacion = input.nextInt();
+            System.out.println();
+            salto = input.nextLine();
 
-        //System.out.println("Datos de la Persona");
-        //persona1.mostrar();
+            if (validacion == 1) {
+                salir = 1;
+            }
+        }
+
         System.out.println("--------------------");
         for (int i=0; i < personas.size(); i++) {
-            personas.get(i).mostrar();
-            System.out.println("-----------------");
+            if (personas.get(i).edad >18) {
+                personas.get(i).mostrar();
+                System.out.println("-----------------");
+            }
         }
     }
 }
