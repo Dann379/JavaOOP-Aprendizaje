@@ -1,9 +1,9 @@
 package persona;
 
 public class Persona {
-    String nombre;
-    int edad;
-    String ciudad;
+    private String nombre;
+    private int edad;
+    private String ciudad;
 
 
     public Persona(String nombre, int edad, String ciudad) {
@@ -11,6 +11,19 @@ public class Persona {
         this.edad = edad;
         this.ciudad = ciudad;
     }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public String getCiudad() {
+        return ciudad;
+    }
+
     public void mostrar(){
         System.out.println("Nombre: " +nombre);
         System.out.println("Edad: " +edad);

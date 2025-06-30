@@ -29,6 +29,7 @@ public class Main {
 
             personas.add(new Persona(username, edad, ciudad));
 
+
             System.out.println("Para imprimir personas mayores a 18 presiona 1");
             int validacion = input.nextInt();
             System.out.println();
@@ -41,13 +42,13 @@ public class Main {
 
         System.out.println("--------------------");
         for (int i=0; i < personas.size(); i++) {
-            if (personas.get(i).edad < 18)
+            if (personas.get(i).getEdad() < 18)
             {
                 count++;
 
             }
 
-            else if (personas.get(i).edad > 17) {
+            else if (personas.get(i).getEdad() > 17) {
                     personas.get(i).mostrar();
                     System.out.println("-----------------");
             }
