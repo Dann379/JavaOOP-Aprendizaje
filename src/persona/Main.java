@@ -8,6 +8,8 @@ public class Main {
 
         Scanner input = new Scanner(System.in);
         int salir = 0;
+        int count = 0;
+
         System.out.println("Agregar Persona");
         System.out.println("--------------------");
         System.out.println();
@@ -39,10 +41,17 @@ public class Main {
 
         System.out.println("--------------------");
         for (int i=0; i < personas.size(); i++) {
-            if (personas.get(i).edad >18) {
-                personas.get(i).mostrar();
-                System.out.println("-----------------");
+            if (personas.get(i).edad < 18)
+            {
+                count++;
+
+            }
+
+            else if (personas.get(i).edad > 17) {
+                    personas.get(i).mostrar();
+                    System.out.println("-----------------");
             }
         }
+        System.out.println("Personas menores: " +count);
     }
 }
